@@ -1,23 +1,42 @@
 .App {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+.Header {
+  height: 10vh;
+  color: #443e3e;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-.Header {
-  color: #443e3e;
   text-shadow: 1px 1px 5px #fff;
 }
 
 .Grid {
-  height: 90vh;
+  margin-top: 5rem;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap
 }
 
 .card {
-  height: 30rem;
+  height: 27.5rem;
   width: 30rem;
-  margin: 1rem;
+  margin-bottom: 5rem;
+  flex-direction: row !important;
+  border: none !important;
+  border-radius: 1rem !important;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.card-img-top {
+  width: 50% !important;
+}
+
+.card-body {
+  width: 50%;
+}
+
+.card-title {
+  font-size: 1.5rem;
 }

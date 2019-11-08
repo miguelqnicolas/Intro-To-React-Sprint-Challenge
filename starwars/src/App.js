@@ -15,17 +15,25 @@ const App = () => {
 				console.log('There was an error', error);
 			})
 	}, []);
-	console.log(people);
+
+	// columns wouldnt work right?
+	// cant use starwars logo for some reason
+	// if i were to use pictures...
+	// proper way to override?
+
 	return (
 		<div className='App'>
-			<header>
+			
+			<header className='Header'>
 				<h1>Star Wars Characters</h1>
 			</header>
+			
 			<div className='Grid'>
 				{people.map((person, index) => (
 					<Cards key={index} person={person}/>
 				))}
 			</div>
+		
 		</div>
 	);
 }
