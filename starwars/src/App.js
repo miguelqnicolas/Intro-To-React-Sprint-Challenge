@@ -1,19 +1,41 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import './App.css';
+import axios from 'axios';
+import Cards from './Cards';
 
 const App = () => {
-  // Try to think through what state you'll need for this app before starting. Then build out
-  // the state properties here.
+	const [people, setPeople] = useState([]);
+	
+	useEffect(() => {
+		axios.get('https://swapi.co/api/people/')
+			.then(response => {
+				setPeople(response.data.results);	
+			})
+			.catch(error => {
+				console.log('There was an error', error);
+			})
+	}, []);
 
-  // Fetch characters from the star wars api in an effect hook. Remember, anytime you have a 
-  // side effect in a component, you want to think about which state and/or props it should
-  // sync up with, if any.
+	// columns wouldnt work right?
+	// cant use starwars logo for some reason
+	// if i were to use pictures...
+	// proper way to override?
 
-  return (
-    <div className="App">
-      <h1 className="Header">React Wars</h1>
-    </div>
-  );
+	return (
+		<div className='App'>
+			
+			<header className='Header'>
+				<h1>Star Wars Characters</h1>
+			</header>
+			
+			<div className='Grid'>
+				{people.map((person, index) => (
+					<Cards key={index} person={person}/>
+				))}
+			</div>
+		
+		</div>
+	);
 }
 
 export default App;

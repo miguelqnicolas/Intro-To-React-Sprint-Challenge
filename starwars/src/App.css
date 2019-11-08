@@ -1,8 +1,49 @@
 .App {
-  text-align: center;
+  max-width: 1024px;
+  margin: 0 auto;
 }
+
 .Header {
+  height: 10vh;
   color: #443e3e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-shadow: 1px 1px 5px #fff;
 }
-/* write your parent styles in here for your App.js */
+
+.Grid {
+  margin-top: 5rem;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap
+}
+
+.card {
+  height: 30rem;
+  width: 30rem;
+  margin-bottom: 5rem;
+  flex-direction: row !important;
+  border: none !important;
+  border-radius: 1rem !important;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.card-img-top {
+  width: 50% !important;
+}
+
+.card-body {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card-title {
+  font-size: 1.5rem;
+}
+
+.btn {
+  width: 5rem;
+}
