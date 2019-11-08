@@ -20,7 +20,7 @@
 }
 
 .card {
-  height: 27.5rem;
+  height: 30rem;
   width: 30rem;
   margin-bottom: 5rem;
   flex-direction: row !important;
@@ -35,8 +35,15 @@
 
 .card-body {
   width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .card-title {
   font-size: 1.5rem;
+}
+
+.btn {
+  width: 5rem;
 }
